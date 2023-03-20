@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* Pixel Bootstrap 4 UI Kit
-=========================================================
-
-* Product Page: http://pixel.themesberg.com
-* Copyright 2018 Themesberg (https://www.themesberg.com)
-
-* Coded by themesberg.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
 "use strict";
 $(document).ready(function () {
 
