@@ -4,24 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Przekierowanie</title>
+    <link type="text/css" rel="stylesheet" href="css/pixel.css">
     <script>
 
-        function redirectBasedOnUserAgent() {
+         function redirectBasedOnUserAgent() {
             var userAgent = navigator.userAgent;
 
             if (/android/i.test(userAgent)) {
-                window.location.href = "./mobile.html"; // Strona dla Androida
+                window.location.href = "./mobile.html"; 
             } else if (/iphone|ipod/i.test(userAgent)) {
-                window.location.href = "./mobile.html"; // Strona dla iPhone
+                window.location.href = "./mobile.html"; 
             } else if (/windows nt/i.test(userAgent)) {
-                window.location.href = "./pc.html"; // Strona dla Windows
+                window.location.href = "./pc.html"; 
             } else {
-                window.location.href = "./pc.html"; // Strona domyślna
+                window.location.href = "./pc.html"; 
             }
         }
     </script>
 </head>
-<body onload="redirectBasedOnUserAgent()">
-    Przekierowywanie
+<style>
+    * {
+      box-sizing: border-box;
+    }
+.przek {
+      background-color: 008081;
+      padding: 20px;
+      flex: 50%;
+    }
+    .win {
+      border-left: 2px solid white;
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-top: 2px solid white;
+    }
+    .margins {
+        margin-left: 100px;  
+      }
+      .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 10px;}
+</style>
+<body style="background-color: #008081 ;" onload="redirectBasedOnUserAgent()">
+
+    
+    
+    
+<div class="flex-container">
+    <div class="przek margins">
+        <div class="win" style="
+         width: 450px; height: 220px;
+         background-color: #C0C0C0;
+         margin-top: 100px; padding: 2px;
+
+        ">
+         <div style="background-color: #000181;color: white; height: 25px; width: 442px;">
+          <div style="padding: 3px;">
+            <img width="25px" style="float: right; margin-top: -2.5px; margin-left: 2px;" class="image" src="./mlotpl/image/close.jpg" alt="image">
+            <img width="25px" style="float: right; margin-top: -2.5px;" class="image" src="./mlotpl/image/rest.jpg" alt="image">
+            <img width="25px" style="float: right; margin-top: -2.5px;" class="image" src="./mlotpl/image/mini.jpg" alt="image">  
+          </div>
+          <div style="padding-left: 4px;font-weight: bold;">Explorer.exe</div></div>
+        
+          <div><img style="margin-top: 30px;display: block;margin-left: auto;margin-right: auto;height: auto;width: 70px;" src="./mlotpl/image/search.gif"></div>
+          <div style="text-align: center;font-size: 15px;">Przekierowanie...</div>
+
+
+
+
+        </div>
+      </div>
+</div>
+
+    
 </body>
 </html>
