@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przekierowanie</title>
+    <script>
+
+        function redirectBasedOnUserAgent() {
+            var userAgent = navigator.userAgent;
+
+            if (/android/i.test(userAgent)) {
+                window.location.href = "./mobile.html"; // Strona dla Androida
+            } else if (/iphone|ipod/i.test(userAgent)) {
+                window.location.href = "./mobile.html"; // Strona dla iPhone
+            } else if (/windows nt/i.test(userAgent)) {
+                window.location.href = "./pc.html"; // Strona dla Windows
+            } else {
+                window.location.href = "./pc.html"; // Strona domyślna
+            }
+        }
+    </script>
+</head>
+<body onload="redirectBasedOnUserAgent()">
+    Przekierowywanie
+</body>
+</html>
