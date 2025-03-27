@@ -170,10 +170,37 @@
       border-right: 2px solid black;
       border-top: 2px solid white;
     }
+   .crt-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
 
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.2);
+  animation: scan 4s linear infinite;
+}
+
+@keyframes scan {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+    
     </style>
   <body style="background-color: #008081;" class="crt vignette">
-    
+    <div class="scanline crt-effect"></div>
     <div class="flex-container">
       <div class="flex-main" style="margin-bottom: -120px;">
         <div class="win"
