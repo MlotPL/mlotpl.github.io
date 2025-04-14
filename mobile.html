@@ -196,6 +196,7 @@
 }
     .vignette {
   position: fixed;
+  overflow-y:scroll;
   margin: auto;
   pointer-event: none;
   overflow-y: scroll;
@@ -222,6 +223,7 @@
   height: 5px;
   background: rgba(44, 44, 44, 0.05);
   animation: scan 4s linear infinite;
+  pointer-event:none;
 }
 
 @keyframes scan {
@@ -237,8 +239,8 @@
 
     </style>
   </head>
-  <body class="vignette crt">
-    <div class="scanline crt-effect"></div>
+  <body>
+    <div class="vignette crt"></div><div class="scanline crt-effect"></div></div>
     <div class="container">
       <div class="window">
         <div class="window-header">
